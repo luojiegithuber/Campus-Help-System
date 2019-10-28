@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+
+<script>
+
+</script>
+
+<style>
+
+
+.button {
+  display: inline-block;
+  padding: 5px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;   
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #A0522D;
+  border: none;
+  width: 50%;
+  border-radius: 15px;
+
+}
+
+
+
+
+.backbox ,.login-box::before{
+	background:url(图书馆登陆背景.jpg) 0 / cover fixed;
+}
+
+
+.backbox{
+   padding: 0;
+   margin: 0;
+   height:100% ; 
+   width:100%; 
+   position:absolute;
+   background-size: 100% 100%;
+}
+
+.login{
+    text-align: center;
+
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    width: 250px;
+    height: 200px;
+    border: 1px solid black;
+
+    padding: 25px;
+    
+    font-size: 24px;
+    color: #A0522D;
+    font-weight:bold;
+
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+<div class="backbox">
+   <div class="login" >图书共享管理系统
+        </br></br>
+        <form action="demo-form.php">
+        <input type="text" name="FirstName" value="用户"><br>
+        <input type="text" name="LastName" value="密码"><br>
+        </form>
+        <br>
+        <button class="button">登录</button>
+   </div>
+</div>
+</body>
+</html>
