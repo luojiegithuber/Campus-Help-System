@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 
-
-<script>
-
-</script>
 
 <style>
 
 
-.button {
+.input_btn {
   display: inline-block;
-  padding: 5px 25px;
-  font-size: 15px;
+  padding: 10px 50px;
+  font-size: 30px;
   cursor: pointer;
   text-align: center;   
   text-decoration: none;
@@ -31,7 +30,7 @@
 
 
 .backbox ,.login-box::before{
-	background:url(图书馆登陆背景.jpg) 0 / cover fixed;
+	background:url(登陆背景.jpg) 0 / cover fixed;
 }
 
 
@@ -53,19 +52,21 @@
     left:0;
     right:0;
     margin:auto;
-    width: 250px;
-    height: 200px;
+    width: 500px;
+    height: 400px;
     border: 1px solid black;
 
     padding: 25px;
     
-    font-size: 24px;
+    font-size: 48px;
     color: #A0522D;
     font-weight:bold;
 
 }
 
-
+.input{
+  font-size: 30px;
+}
 
 
 </style>
@@ -73,14 +74,13 @@
 
 <body>
 <div class="backbox">
-   <div class="login" >图书共享管理系统
+   <div class="login" >校园帮帮信息管理系统
         </br></br>
-        <form action="demo-form.php">
-        <input type="text" name="FirstName" value="用户"><br>
-        <input type="text" name="LastName" value="密码"><br>
+        <form action="post.php" method="post">
+        <input class="input" type="text" name="username" value="用户"><br>
+        <input class="input" type="text" name="password" value="密码"><br>
+        <input class="input_btn" type="submit" value="提交">
         </form>
-        <br>
-        <button class="button">登录</button>
    </div>
 </div>
 </body>
