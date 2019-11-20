@@ -4,7 +4,35 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 
-<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script >
+  
+function loadXMLDoc(){
+  var xmlhttp;
+  if (window.XMLHttpRequest)
+  {
+    // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+    xmlhttp=new XMLHttpRequest();
+  }
+  else
+  {
+    // IE6, IE5 浏览器执行代码
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function()
+  {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+
+      alert(xmlhttp.responseText);
+    }
+  }
+  xmlhttp.open("POST","hello_name.php",true);
+  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  xmlhttp.send("name=罗杰&age=18");
+}
+
+
+</script>
 
 
 <style>
@@ -79,8 +107,9 @@
         <form action="post.php" method="post">
         <input class="input" type="text" name="username" value="用户"><br>
         <input class="input" type="text" name="password" value="密码"><br>
-        <input class="input_btn" type="submit" value="提交">
+        <input class="input_btn" type="submit"  value="提交">
         </form>
+        <button type="button" onclick="loadXMLDoc()">ssss</button>
    </div>
 </div>
 </body>
