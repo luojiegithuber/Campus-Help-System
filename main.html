@@ -7,16 +7,30 @@
 <link type="text/css" rel="styleSheet"  href="main.css" />
 
 </head>
+<script >
+
+  function search(){
+    alert("宋志豪牛逼");
+    var Ot1 = document.getElementById("key").value;
+    var count = document.getElementById('middle').innerHTML;
+    var n = count.split(Ot1).join("<font color='red'>"+ Ot1 +"</font>");//这里是在网上查的，实在想不出来。。。大神还有别的方式吗？
+    document.getElementById('middle').innerHTML=n;
+  }
+  
+</script>
+
+
 <body>
 
 <div class="header">
   <div class="logo" style="font-size: 50px;"></div>
   <div class="systemName" style="font-size: 50px" >校园帮帮信息管理系统</div>
     <div class="search-container" >
-    <form action="hello.php" method="get">
-      <input type="text" placeholder="搜索.." name="search">
-      <button type="submit"><i class="fa fa-search"></i>提交</button>
-    </form>
+
+      <input id="key" type="text" placeholder="搜索.." name="search">
+      
+
+    <button onclick="search()">提交</button>
   </div>
 </div>
 
@@ -53,7 +67,7 @@
 </ul>
   </div>
   
-  <div class="column middle">
+  <div id="middle" class="column middle">赛尔号
     <h2>主区域内容</h2>
     <p>公元2110年，地球能源已接近枯竭，环境污染日趋严重。为了实现地外星系探索计划，人类制造了名为赛尔的机器人，并建造能源探索飞船赛尔号。在宇宙探索过程中，他们还发现了外星精灵，这些精灵们成为了赛尔机器人探寻新能源的重要帮手和伙伴。而以宇宙海盗欧比组织为首的邪恶势力正在肆意掠夺宇宙资源，为了挫败他们的阴谋，英勇的赛尔们和正义的精灵伙伴们一起为守护宇宙和平而战。！</p>
     <p>公元2110年，地球能源已接近枯竭，环境污染日趋严重。 为了实现地外星系探索计划，人类制造了名为赛尔的机器人，并建造能源探索飞船赛尔号，寻找传说中的无尽能源。可就在找到无尽能源的时候，无尽能源被宇宙海盗欧比组织摧毁，赛尔们不得不去寻找藏在宇宙深处，由谱尼看守的第二个无尽能源</p>
