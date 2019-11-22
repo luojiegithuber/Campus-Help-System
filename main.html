@@ -7,20 +7,15 @@
 <link type="text/css" rel="styleSheet"  href="main.css" />
 
 </head>
-<script >
-
-  function search(){
-    alert("宋志豪牛逼");
-    var Ot1 = document.getElementById("key").value;
-    var count = document.getElementById('middle').innerHTML;
-    var n = count.split(Ot1).join("<font color='red'>"+ Ot1 +"</font>");//这里是在网上查的，实在想不出来。。。大神还有别的方式吗？
-    document.getElementById('middle').innerHTML=n;
-  }
-  
-</script>
-
-
 <body>
+
+        <div id='inputbox' class="mod_box">
+        <a class='x' href=''; onclick="msgbox(0); return false;">关闭</a>
+        <input type="text" placeholder="请输入新主题" id="mod_theme"><br/><br/>
+        <textarea cols="50" rows="10" id="mod_content">输入更改的内容...</textarea><br/>
+        <button class="mod_btn" onclick="mod_btn(id)">确定更改</button>
+       </div>
+
 
 <div class="header">
   <div class="logo" style="font-size: 50px;"></div>
@@ -29,7 +24,6 @@
 
       <input id="key" type="text" placeholder="搜索.." name="search">
       
-
     <button onclick="search()">提交</button>
   </div>
 </div>
@@ -71,16 +65,57 @@
     <h2>主区域内容</h2>
     <p>公元2110年，地球能源已接近枯竭，环境污染日趋严重。为了实现地外星系探索计划，人类制造了名为赛尔的机器人，并建造能源探索飞船赛尔号。在宇宙探索过程中，他们还发现了外星精灵，这些精灵们成为了赛尔机器人探寻新能源的重要帮手和伙伴。而以宇宙海盗欧比组织为首的邪恶势力正在肆意掠夺宇宙资源，为了挫败他们的阴谋，英勇的赛尔们和正义的精灵伙伴们一起为守护宇宙和平而战。！</p>
     <p>公元2110年，地球能源已接近枯竭，环境污染日趋严重。 为了实现地外星系探索计划，人类制造了名为赛尔的机器人，并建造能源探索飞船赛尔号，寻找传说中的无尽能源。可就在找到无尽能源的时候，无尽能源被宇宙海盗欧比组织摧毁，赛尔们不得不去寻找藏在宇宙深处，由谱尼看守的第二个无尽能源</p>
+    <hr/>
+
+    <h4>一个自定义列表：</h4>
+  <dl id="mainlist">
+
+  <dt id="dt_000">姓名——时间</dt>
+  <dd><div id="dd_000">
+   <span>委托的标题</span>
+   <p class="list_content">今天我的马不知道跑到哪里去了，请求有心人帮我找回来</p>
+   <button class="modify" onclick="msgbox(1,this.parentNode.id)" >修改</button>
+   <button class="remove">删除</button>
+  </div></dd>
+
+   <dt id="dt_001">姓名——时间</dt>
+   <dd><div id="dd_001">
+   <span>委托的标题2</span>
+   <p class="list_content">22今天我的马不知道跑到哪里去了，请求有心人帮我找回来</p>
+   <button class="modify" onclick="msgbox(1,this.parentNode.id)" >修改</button>
+   <button class="remove">删除</button>
+  </div></dd>
+
+  </dl>
+
   </div>
   
-  <div class="column right">
-    <h2>右侧栏</h2>
-    <p>哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或或或或或或或或</p>
+  <div id="right_part" class="column right">
+    <h2>信息处理示范栏</h2>
+    <div name="myForm">
+      <form class="user_input" action="xxx.php" onsubmit="return validateForm()" method="post">
+        <input type="text" placeholder="请输入姓名" name="sname" id="sname">
+        <input type="text" placeholder="请输入学号" name="sno"   id="sno"  >
+        <input type="text" placeholder="请输入主题" name="theme" id="theme">
+        <textarea cols="50" rows="10" id="content">在这里输入内容...</textarea>
+     </form>
+    </div>
+    <div class="user_button">
+        <button onclick="add()">添加</button>
+        <button>修改</button>
+        <button onclick="remove()">删除</button>
+    </div>
+        <input type="button" onClick="msgbox(1)" value="点击弹出输入框">
+
   </div>
+
 </div>
 
   <div class="footer">
-  <p>底部区域</p>
+  <p>Copyright © 2019 罗杰(计科1703班). All rights reserved.</p>
 </div>
 </body>
+
+<script src="main.js"></script>
+
 </html>

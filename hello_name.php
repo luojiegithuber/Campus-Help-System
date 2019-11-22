@@ -9,4 +9,5 @@ $get_name=$_POST['name'];//客户端post过来的姓名
 $get_age=$_POST['age'];//客户端post过来的岁数  
 
  echo "Hello World ！${get_age}岁的${get_name}";
+
 ?>

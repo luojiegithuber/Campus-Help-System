@@ -10,19 +10,16 @@ function loadXMLDoc(){
   var xmlhttp;
   if (window.XMLHttpRequest)
   {
-    // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
     xmlhttp=new XMLHttpRequest();
   }
   else
   {
-    // IE6, IE5 浏览器执行代码
     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
   }
   xmlhttp.onreadystatechange=function()
   {
     if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-
       alert(xmlhttp.responseText);
     }
   }
@@ -109,7 +106,7 @@ function loadXMLDoc(){
         <input class="input" type="text" name="password" value="密码"><br>
         <input class="input_btn" type="submit"  value="提交">
         </form>
-        <button type="button" onclick="loadXMLDoc()">ssss</button>
+        <button type="button" onclick="loadXMLDoc()">测试表单</button>
    </div>
 </div>
 </body>

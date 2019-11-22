@@ -36,7 +36,7 @@ $get_password=$_POST['password'];//客户端post过来的密码
             //用户名密码匹配正确  
            //****** mysqli_query("UPDATE user SET status='1' WHERE id =$result[id]");/*这里的数组不需要加单引号*/  
             $back['status']="1";  
-            $back['info']="login success";  
+            $back['info']="登陆成功";  
             $back['sex']=$row['sex'];  
             $back['nicename']=$row['nicename'];  
             header("location:main.html");
@@ -44,14 +44,14 @@ $get_password=$_POST['password'];//客户端post过来的密码
         }else{
             /*密码错误*/  
             $back['status']="-2";  
-            $back['info']="password error";  
+            $back['info']="密码错误";  
             echo(json_encode($back));   
         }  
   
     }else{  
         //不存在该用户  
         $back['status']="-1";  
-        $back['info']="user not exist";  
+        $back['info']="用户不存在";  
         echo(json_encode($back));   
     }  
            
