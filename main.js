@@ -104,7 +104,9 @@ var xmlhttp;
  function search(){
     var Ot1 = document.getElementById("key").value;
     var count = document.getElementById('middle').innerHTML;
-    var n = count.split(Ot1).join("<font color='red'>"+ Ot1 +"</font>");//这里是在网上查的，实在想不出来。。。大神还有别的方式吗？
+
+    var n = count.split(Ot1).join("<font color='red'>"+ Ot1 +"</font>");
+    
     document.getElementById('middle').innerHTML=n;
 }
 

@@ -228,7 +228,24 @@ font-size: 30px;
 }
 
 
-
 .search_entrust{
   float: right;
 }
+
+#mainlist dt{
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #E6E6FA;
+  border-radius: 5px;
+}
+
+#mainlist dt dd{
+  font-size: 15px;
+}
+
+#mainlist dt dd span{
+  font-size: 17px;
+  font-weight:bold;
+}
+
