@@ -38,15 +38,18 @@ function add(){
   
   btn_mod.innerHTML="修改";
   btn_mod.setAttribute('class', "modify");
-  btn_mod.onclick=function(){
+  btn_mod.setAttribute('onclick', "msgbox(1,this.parentNode.id)");
+  
+  /*btn_mod.onclick=function(){
      msgbox(1,this.parentNode.id);
-  };/*注意一下这里id*/
+  };*/
 
   btn_rm.innerHTML="删除";
   btn_rm.setAttribute('class', "remove");
-  btn_rm.onclick=function(){
+  btn_rm.setAttribute('onclick', "remove(this.parentNode.id)");
+  /*btn_rm.onclick=function(){
      remove(this.parentNode.id);
-  };/*注意一下这里id*/ 
+  };*/ 
 
   div.appendChild(span);
   div.appendChild(p);
@@ -55,10 +58,11 @@ function add(){
 
   dd.appendChild(div);
 
-  dt.appendChild(dd);
+  
 
   var element = document.getElementById("mainlist");
   element.appendChild(dt);
+  element.appendChild(dd);
 
   /*后端加入数据库*/
   
@@ -106,7 +110,6 @@ var xmlhttp;
     var count = document.getElementById('middle').innerHTML;
 
     var n = count.split(Ot1).join("<font color='red'>"+ Ot1 +"</font>");
-    
     document.getElementById('middle').innerHTML=n;
 }
 
@@ -120,7 +123,7 @@ function remove(id){//先传入的是dd
 
   var parent = document.getElementById("mainlist");
   var child_dd = document.getElementById(id);
-  //parent.removeChild(child_dd.parentNode);//这个才是真的dd
+  parent.removeChild(child_dd.parentNode);//这个才是真的dd
 
   var id=id.replace("dd","dt");
   var child_dt = document.getElementById(id);
@@ -310,17 +313,18 @@ function read_db(obj){
   
   btn_mod.innerHTML="修改";
   btn_mod.setAttribute('class', "modify");
-  btn_mod.onclick=function(){
+  btn_mod.setAttribute('onclick', "msgbox(1,this.parentNode.id)");
+  /* btn_mod.onclick=function(){
      msgbox(1,this.parentNode.id);
-  };/*注意一下这里id*/
+  };*/
 
   btn_rm.innerHTML="删除";
   btn_rm.setAttribute('class', "remove");
-  btn_rm.onclick=function(){
+  btn_rm.setAttribute('onclick', "remove(this.parentNode.id)");
+  /*btn_rm.onclick=function(){
      alert(this.parentNode.id);
      remove(this.parentNode.id);
-
-  };/*注意一下这里id*/ 
+  };*/ 
 
   div.appendChild(span);
   div.appendChild(p);
@@ -329,10 +333,11 @@ function read_db(obj){
 
   dd.appendChild(div);
 
-  dt.appendChild(dd);
+  
 
   var element = document.getElementById("mainlist");
   element.appendChild(dt);
+  element.appendChild(dd);
 
 }
 

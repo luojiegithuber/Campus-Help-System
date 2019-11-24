@@ -235,16 +235,20 @@ font-size: 30px;
 #mainlist dt{
   font-size: 18px;
   padding: 10px;
-  margin: 10px;
+  margin-top: : 10px;
   background-color: #E6E6FA;
-  border-radius: 5px;
 }
 
-#mainlist dt dd{
+#mainlist dd{
+  background-color: #E6E6FA;
+  margin-left: 0px;
+  margin-bottom:10px; 
+  padding-left: 50px;
+  padding-bottom: 10px;
   font-size: 15px;
 }
 
-#mainlist dt dd span{
+#mainlist dd span{
   font-size: 17px;
   font-weight:bold;
 }
