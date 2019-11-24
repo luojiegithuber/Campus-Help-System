@@ -2,18 +2,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>CSS 网页布局</title>
+<title>校园帮帮信息管理系统</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link type="text/css" rel="styleSheet"  href="main.css" />
 
 </head>
-<body>
+<body onload="loadAll()">
 
         <div id='inputbox' class="mod_box">
         <a class='x' href=''; onclick="msgbox(0); return false;">关闭</a>
         <input type="text" placeholder="请输入新主题" id="mod_theme"><br/><br/>
         <textarea cols="50" rows="10" id="mod_content">输入更改的内容...</textarea><br/>
-        <button class="mod_btn" onclick="mod_btn(id)">确定更改</button>
+        <button class="mod_btn" onclick="modify(id)">确定更改</button>
        </div>
 
 
@@ -61,30 +61,35 @@
 </ul>
   </div>
   
-  <div id="middle" class="column middle">赛尔号
+  <div id="middle" class="column middle">
     <h2>主区域内容</h2>
     <p>公元2110年，地球能源已接近枯竭，环境污染日趋严重。为了实现地外星系探索计划，人类制造了名为赛尔的机器人，并建造能源探索飞船赛尔号。在宇宙探索过程中，他们还发现了外星精灵，这些精灵们成为了赛尔机器人探寻新能源的重要帮手和伙伴。而以宇宙海盗欧比组织为首的邪恶势力正在肆意掠夺宇宙资源，为了挫败他们的阴谋，英勇的赛尔们和正义的精灵伙伴们一起为守护宇宙和平而战。！</p>
     <p>公元2110年，地球能源已接近枯竭，环境污染日趋严重。 为了实现地外星系探索计划，人类制造了名为赛尔的机器人，并建造能源探索飞船赛尔号，寻找传说中的无尽能源。可就在找到无尽能源的时候，无尽能源被宇宙海盗欧比组织摧毁，赛尔们不得不去寻找藏在宇宙深处，由谱尼看守的第二个无尽能源</p>
     <hr/>
-
-    <h4>一个自定义列表：</h4>
+       <div class="search_entrust">
+         <input id="key_name" type="text" >
+         <button onclick="loadByName()">查询委托</button>
+       </div>
+   <br/>
+   <hr/>
+    <h4>校园帮帮委托列表：</h4>
   <dl id="mainlist">
 
-  <dt id="dt_000">姓名——时间</dt>
-  <dd><div id="dd_000">
+  <dt id="dt_000">姓名——时间
+  <dd><div id="dd_000" style="display:none;">
    <span>委托的标题</span>
    <p class="list_content">今天我的马不知道跑到哪里去了，请求有心人帮我找回来</p>
    <button class="modify" onclick="msgbox(1,this.parentNode.id)" >修改</button>
-   <button class="remove">删除</button>
-  </div></dd>
+   <button class="remove" onclick="remove(this.parentNode.id)">删除</button>
+  </div></dd></dt>
 
-   <dt id="dt_001">姓名——时间</dt>
+   <dt id="dt_001">请求寻找我丢失的宠物
    <dd><div id="dd_001">
-   <span>委托的标题2</span>
+   <span>罗杰  0902170318</span>
    <p class="list_content">22今天我的马不知道跑到哪里去了，请求有心人帮我找回来</p>
    <button class="modify" onclick="msgbox(1,this.parentNode.id)" >修改</button>
-   <button class="remove">删除</button>
-  </div></dd>
+   <button class="remove" onclick="remove(this.parentNode.id)">删除</button>
+  </div></dd></dt>
 
   </dl>
 
@@ -102,11 +107,8 @@
     </div>
     <div class="user_button">
         <button onclick="add()">添加</button>
-        <button>修改</button>
-        <button onclick="remove()">删除</button>
+        <button onclick="show()">show</button>
     </div>
-        <input type="button" onClick="msgbox(1)" value="点击弹出输入框">
-
   </div>
 
 </div>
