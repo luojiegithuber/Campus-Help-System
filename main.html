@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>校园帮帮信息管理系统</title>
+<title>校园委托信息管理系统</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link type="text/css" rel="styleSheet"  href="main.css" />
 
@@ -19,12 +19,12 @@
 
 <div class="header">
   <div class="logo" style="font-size: 50px;"></div>
-  <div class="systemName" style="font-size: 50px" >校园帮帮信息管理系统</div>
+  <div class="systemName" style="font-size: 50px" >校园委托信息管理系统</div>
     <div class="search-container" >
 
       <input id="key" type="text" placeholder="搜索.." name="search">
       
-    <button onclick="search()">提交</button>
+    <button onclick="search()">查询</button>
   </div>
 </div>
 
@@ -63,8 +63,9 @@
   
   <div id="middle" class="column middle">
     <h2>主区域内容</h2>
-    <p>公元2110年，地球能源已接近枯竭，环境污染日趋严重。为了实现地外星系探索计划，人类制造了名为赛尔的机器人，并建造能源探索飞船赛尔号。在宇宙探索过程中，他们还发现了外星精灵，这些精灵们成为了赛尔机器人探寻新能源的重要帮手和伙伴。而以宇宙海盗欧比组织为首的邪恶势力正在肆意掠夺宇宙资源，为了挫败他们的阴谋，英勇的赛尔们和正义的精灵伙伴们一起为守护宇宙和平而战。！</p>
-    <p>公元2110年，地球能源已接近枯竭，环境污染日趋严重。 为了实现地外星系探索计划，人类制造了名为赛尔的机器人，并建造能源探索飞船赛尔号，寻找传说中的无尽能源。可就在找到无尽能源的时候，无尽能源被宇宙海盗欧比组织摧毁，赛尔们不得不去寻找藏在宇宙深处，由谱尼看守的第二个无尽能源</p>
+    <p><img alt="" class="has" height="225" src="https://api.xygeng.cn/bing/1366.php" width="400" style="float: right;margin: 10px;" />随着互联网和智能手机的普及，人与人之间的联系在这个时代从物理意义上讲是更加接近了，很多事情业务也因为互联网+而变成一种颇具便利的服务，例如外卖、电商、快递物流等等，尤其是在大学校园这些应用更为广泛地为人们服务。但是考虑到其服务单一性的特点，尚且不能满足大多数人个性化服务的一些细节方面需求，我称之为“委托”。例如快递站点的要求是在规定时间段到规定地点排队去拿，不想吃外卖但不想出门，寒假代养宠物，亦或是有更多特殊的个人需求。<br/>“校园委托”是一个为学生服务的系统，所有登录系统的同学需要经过学号认证。委托人可以在网页上发布委托，其他人可以根据自己能力接任何形式的委托。本次根据实验要求完成面向管理员的“校园帮帮信息管理系统”，可以对进行委托的添加、修改、操作、搜索等操作，前端数据与数据库同步变化。</p>
+
+
     <hr/>
        <div class="search_entrust">
          <input id="key_name" type="text" >
@@ -72,20 +73,10 @@
        </div>
    <br/>
    <hr/>
-    <h4>校园帮帮委托列表：</h4>
+    <h4>校园委托列表：</h4>
+
   <dl id="mainlist">
-
-
-
-   <dt id="dt_001">请求寻找我丢失的宠物
-   <dd><div id="dd_001">
-   <span>罗杰  0902170318</span>
-   <p class="list_content">22今天我的马不知道跑到哪里去了，请求有心人帮我找回来</p>
-   <button class="modify" onclick="msgbox(1,this.parentNode.id)" >修改</button>
-   <button class="remove" onclick="remove(this.parentNode.id)">删除</button>
-  </div></dd></dt>
-
-  </dl>
+   </dl>
 
   </div>
   
@@ -95,19 +86,19 @@
       <form class="user_input" action="xxx.php" onsubmit="return validateForm()" method="post">
         <input type="text" placeholder="请输入姓名" name="sname" id="sname">
         <input type="text" placeholder="请输入学号" name="sno"   id="sno"  >
-        <input type="text" placeholder="请输入主题" name="theme" id="theme">
+        <br/><br/>
+        <input type="text" placeholder="请输入委托的标题" name="theme" id="theme">
         <textarea cols="50" rows="10" id="content">在这里输入内容...</textarea>
      </form>
     </div>
     <div class="user_button">
         <button onclick="add()">添加</button>
-        <button onclick="show()">show</button>
     </div>
   </div>
 
 </div>
 
-  <div class="footer">
+<div class="footer">
   <p>Copyright © 2019 罗杰(计科1703班). All rights reserved.</p>
 </div>
 </body>

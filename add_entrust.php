@@ -25,8 +25,6 @@ if ($conn->connect_error) {
     $content=$_POST['content'];     //post过来的委托内容
     $time=$_POST['time'];               //post过来的时间  
 
-
-    if(!$result)echo "error";
     
     $sql = "INSERT INTO entrust(sname , sno , title , content , time)VALUES ('$sname', '$sno', '$title','$content','$time')";
  

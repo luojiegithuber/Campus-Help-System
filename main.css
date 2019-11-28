@@ -162,6 +162,7 @@ li a:hover:not(.active) {
 
 /**/
 
+/*搜索框*/
 .search-container{
   position:absolute;
   right:0;
@@ -180,18 +181,17 @@ font-size: 30px;
 }
 
 
-/*弹出来的消息框，需要时候打开，不要的时候隐藏*/
+/*弹出来的修改框，需要时候打开，不要的时候隐藏*/
 .mod_box{
     
-
     padding: 25px;
 
     text-align: center;
 
     width: 600px; height: 400px;   
     position: absolute; left: 50%; top: 50%;   
-    margin-top: -200px;    /* 高度的一半 */  
-    margin-left: -300px;    /* 宽度的一半 */  
+    margin-top: -200px;    
+    margin-left: -300px;    
 
     background-color:#008CBA;
     box-shadow: 10px 10px 5px #888888;
